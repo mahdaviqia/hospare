@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('title','Hospare - Home')
 @section('main-content')
 <!-- Slider Area -->
 @if(count($banners)>0)

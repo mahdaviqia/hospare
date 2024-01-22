@@ -13,6 +13,7 @@
         "fakerphp/faker": "^1.21",
         "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.7",
         "laravel/framework": "^9.0",
         "laravel/socialite": "5.5.6",
         "laravel/tinker": "^2.7.3",

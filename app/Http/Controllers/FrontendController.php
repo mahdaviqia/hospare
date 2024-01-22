@@ -17,6 +17,7 @@ use DB;
 use Hash;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 class FrontendController extends Controller
 {
 
@@ -31,6 +32,8 @@ class FrontendController extends Controller
         // return $banner;
         $products=Product::where('status','active')->orderBy('id','DESC')->limit(8)->get();
         $category=Category::where('status','active')->where('is_parent',1)->orderBy('title','ASC')->get();
+        //nanta edit resize image
+
         // return $category;
         return view('frontend.index')
                 ->with('featured',$featured)
@@ -38,6 +41,7 @@ class FrontendController extends Controller
                 ->with('banners',$banners)
                 ->with('product_lists',$products)
                 ->with('category_lists',$category);
+                // ->with('resizedLogoDataUri', $resizedLogoDataUri);
     }
 
     public function aboutUs(){

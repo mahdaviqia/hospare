@@ -47,11 +47,22 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-12">
                     <!-- Logo -->
-                    <div class="logo">
+                    <div class="logo" style="max-height: 60px; overflow: hidden;">
                         @php
                             $settings=DB::table('settings')->get();
+                            $originalLogoPath = public_path('images/logo_sparepart.jpg');
+
+                            // Resized logo dimensions
+                            $width = 250; // Sesuaikan dengan lebar yang diinginkan
+                            $height = 150; // Sesuaikan dengan tinggi yang diinginkan
+
+                            // Resize the logo using Intervention Image
+                            $resizedLogo = Image::make($originalLogoPath)->resize($width, $height);
+
+                            // Menyimpan hasil ke dalam variabel
+                            $resizedLogoDataUri = 'data:image/jpeg;base64,' . base64_encode($resizedLogo->encode('jpeg'));
                         @endphp                    
-                        <a href="{{route('home')}}"><img src="@foreach($settings as $data) {{$data->logo}} @endforeach" alt="logo"></a>
+                        <a href="{{route('home')}}"><img class="navbar-logo" style="max-height: 100%; width: auto; margin-top: -24px;" src="{{$resizedLogoDataUri}}" alt="logo"></a>
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
