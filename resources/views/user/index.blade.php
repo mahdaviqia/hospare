@@ -97,23 +97,23 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+              <th>Kode Order.</th>
+              <th>Nama</th>
               <th>Email</th>
-              <th>Quantity</th>
-              <th>Total Amount</th>
+              <th>Jumlah Barang</th>
+              <th>Harga Keseluruhan</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+            <th>S.N.</th>
+              <th>Kode Order.</th>
+              <th>Nama</th>
               <th>Email</th>
-              <th>Quantity</th>
-              <th>Total Amount</th>
+              <th>Jumlah Barang</th>
+              <th>Harga Keseluruhan</th>
               <th>Status</th>
               <th>Action</th>
               </tr>

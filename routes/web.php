@@ -27,7 +27,7 @@ Route::post('password-reset', 'FrontendController@showResetForm')->name('passwor
 Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
 Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
 
-Route::get('/','FrontendController@home')->name('home');
+Route::get('/','FrontendController@home')->name('home')->middleware('user');
 
 // Frontend Routes
 Route::get('/home', 'FrontendController@index');

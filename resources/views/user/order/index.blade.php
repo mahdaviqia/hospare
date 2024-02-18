@@ -18,10 +18,10 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+              <th>Nomor Order.</th>
+              <th>Nama</th>
               <th>Email</th>
-              <th>Quantity</th>
+              <th>Jumlah Barang</th>
               <th>Charge</th>
               <th>Total Amount</th>
               <th>Status</th>

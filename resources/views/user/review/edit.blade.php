@@ -10,7 +10,7 @@
       @csrf
       @method('PATCH')
       <div class="form-group">
-        <label for="name">Review By:</label>
+        <label for="name">Di Review Oleh:</label>
         <input type="text" disabled class="form-control" value="{{$review->user_info->name}}">
       </div>
       <div class="form-group">

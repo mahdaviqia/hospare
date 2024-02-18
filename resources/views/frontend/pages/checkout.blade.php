@@ -11,7 +11,7 @@
                 <div class="col-12">
                     <div class="bread-inner">
                         <ul class="bread-list">
-                            <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
+                            <li><a href="{{route('home')}}">Beranda<i class="ti-arrow-right"></i></a></li>
                             <li class="active"><a href="javascript:void(0)">Checkout</a></li>
                         </ul>
                     </div>
@@ -30,13 +30,13 @@
 
                         <div class="col-lg-8 col-12">
                             <div class="checkout-form">
-                                <h2>Make Your Checkout Here</h2>
-                                <p>Please register in order to checkout more quickly</p>
+                                <h2>Buat Pesananmu disini</h2>
+                                <br>
                                 <!-- Form -->
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>First Name<span>*</span></label>
+                                            <label>Nama Depan<span>*</span></label>
                                             <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}" value="{{old('first_name')}}">
                                             @error('first_name')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Last Name<span>*</span></label>
+                                            <label>Nama Belakang<span>*</span></label>
                                             <input type="text" name="last_name" placeholder="" value="{{old('lat_name')}}">
                                             @error('last_name')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Email Address<span>*</span></label>
+                                            <label>Email<span>*</span></label>
                                             <input type="email" name="email" placeholder="" value="{{old('email')}}">
                                             @error('email')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -63,22 +63,23 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Phone Number <span>*</span></label>
+                                            <label>Nomor Telepon <span>*</span></label>
                                             <input type="number" name="phone" placeholder="" required value="{{old('phone')}}">
                                             @error('phone')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
                                         </div>
                                     </div>
+                                    <input type="hidden" name="country" id="country" value="INA">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Country<span>*</span></label>
-                                            <select name="country" id="country">
+                                            <label>Provinsi<span>*</span></label>
+                                            <!-- <select name="country" id="country">
                                                 <option value="AF">Afghanistan</option>
                                                 <option value="AX">Åland Islands</option>
-                                                <option value="AL">Albania</option>
+                                                <option value="AL">Al bania</option>
                                                 <option value="DZ">Algeria</option>
-                                                <option value="AS">American Samoa</option>
+                                                <option value="AS">erican Samoa</option>
                                                 <option value="AD">Andorra</option>
                                                 <option value="AO">Angola</option>
                                                 <option value="AI">Anguilla</option>
@@ -319,12 +320,46 @@
                                                 <option value="YE">Yemen</option>
                                                 <option value="ZM">Zambia</option>
                                                 <option value="ZW">Zimbabwe</option>
+                                            </select> -->
+                                            <select name="country" id="country">
+                                                <option value="aceh">Aceh</option>
+                                                <option value="sumatera-utara">Sumatera Utara</option>
+                                                <option value="sumatera-barat">Sumatera Barat</option>
+                                                <option value="riau">Riau</option>
+                                                <option value="jambi">Jambi</option>
+                                                <option value="sumatera-selatan">Sumatera Selatan</option>
+                                                <option value="lampung">Lampung</option>
+                                                <option value="kepulauan-bangka-belitung">Kepulauan Bangka Belitung</option>
+                                                <option value="kepulauan-riau">Kepulauan Riau</option>
+                                                <option value="dkijakarta">DKI Jakarta</option>
+                                                <option value="jawa-barat">Jawa Barat</option>
+                                                <option value="jawa-tengah">Jawa Tengah</option>
+                                                <option value="di-yogyakarta">DI Yogyakarta</option>
+                                                <option value="jawa-timur">Jawa Timur</option>
+                                                <option value="banten">Banten</option>
+                                                <option value="bali">Bali</option>
+                                                <option value="nusa-tenggara-barat">Nusa Tenggara Barat</option>
+                                                <option value="nusa-tenggara-timur">Nusa Tenggara Timur</option>
+                                                <option value="kalimantan-barat">Kalimantan Barat</option>
+                                                <option value="kalimantan-tengah">Kalimantan Tengah</option>
+                                                <option value="kalimantan-selatan">Kalimantan Selatan</option>
+                                                <option value="kalimantan-timur">Kalimantan Timur</option>
+                                                <option value="kalimantan-utara">Kalimantan Utara</option>
+                                                <option value="sulawesi-utara">Sulawesi Utara</option>
+                                                <option value="sulawesi-tengah">Sulawesi Tengah</option>
+                                                <option value="sulawesi-selatan">Sulawesi Selatan</option>
+                                                <option value="sulawesi-tenggara">Sulawesi Tenggara</option>
+                                                <option value="gorontalo">Gorontalo</option>
+                                                <option value="maluku">Maluku</option>
+                                                <option value="maluku-utara">Maluku Utara</option>
+                                                <option value="papua-barat">Papua Barat</option>
+                                                <option value="papua">Papua</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Address Line 1<span>*</span></label>
+                                            <label>Alamat Lengkap<span>*</span></label>
                                             <input type="text" name="address1" placeholder="" value="{{old('address1')}}">
                                             @error('address1')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -333,7 +368,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Address Line 2</label>
+                                            <label>Kota</label>
                                             <input type="text" name="address2" placeholder="" value="{{old('address2')}}">
                                             @error('address2')
                                                 <span class='text-danger'>{{$message}}</span>

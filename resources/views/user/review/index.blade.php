@@ -9,7 +9,7 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Review Lists</h6>
+      <h6 class="m-0 font-weight-bold text-primary float-left">List Review</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,23 +18,23 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Review By</th>
-              <th>Product Title</th>
+              <th>Di review</th>
+              <th>Nama Barang</th>
               <th>Review</th>
               <th>Rate</th>
-              <th>Date</th>
+              <th>Tanggal</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Review By</th>
-              <th>Product Title</th>
+            <th>S.N.</th>
+              <th>Di review</th>
+              <th>Nama Barang</th>
               <th>Review</th>
               <th>Rate</th>
-              <th>Date</th>
+              <th>Tanggal</th>
               <th>Status</th>
               <th>Action</th>
               </tr>

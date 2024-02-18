@@ -12,12 +12,12 @@
       <thead>
         <tr>
             <th>S.N.</th>
-            <th>Order No.</th>
-            <th>Name</th>
+            <th>Kode Order.</th>
+            <th>Nama</th>
             <th>Email</th>
-            <th>Quantity</th>
-            <th>Charge</th>
-            <th>Total Amount</th>
+            <th>Jumlah Barang</th>
+            <th>Harga Bayar</th>
+            <th>Harga per Barang</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -59,18 +59,18 @@
         <div class="row">
           <div class="col-lg-6 col-lx-4">
             <div class="order-info">
-              <h4 class="text-center pb-4">ORDER INFORMATION</h4>
+              <h4 class="text-center pb-4">INFORMASI PESANAN</h4>
               <table class="table">
                     <tr class="">
-                        <td>Order Number</td>
+                        <td>Kode Order</td>
                         <td> : {{$order->order_number}}</td>
                     </tr>
                     <tr>
-                        <td>Order Date</td>
+                        <td>Tanggal Order</td>
                         <td> : {{$order->created_at->format('D d M, Y')}} at {{$order->created_at->format('g : i a')}} </td>
                     </tr>
                     <tr>
-                        <td>Quantity</td>
+                        <td>Jumlah Barang</td>
                         <td> : {{$order->quantity}}</td>
                     </tr>
                     <tr>
@@ -81,19 +81,19 @@
                       @php
                           $shipping_charge=DB::table('shippings')->where('id',$order->shipping_id)->pluck('price');
                       @endphp
-                        <td>Shipping Charge</td>
+                        <td>Harga Pengiriman</td>
                         <td> :${{$order->shipping->price}}</td>
                     </tr>
                     <tr>
-                        <td>Total Amount</td>
+                        <td>Harga per Barang</td>
                         <td> : $ {{number_format($order->total_amount,2)}}</td>
                     </tr>
                     <tr>
-                      <td>Payment Method</td>
+                      <td>Pembayaran</td>
                       <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
                     </tr>
                     <tr>
-                        <td>Payment Status</td>
+                        <td>Status Pembayaran</td>
                         <td> : {{$order->payment_status}}</td>
                     </tr>
               </table>
@@ -105,7 +105,7 @@
               <h4 class="text-center pb-4">SHIPPING INFORMATION</h4>
               <table class="table">
                     <tr class="">
-                        <td>Full Name</td>
+                        <td>Nama Lengkap</td>
                         <td> : {{$order->first_name}} {{$order->last_name}}</td>
                     </tr>
                     <tr>
@@ -113,19 +113,19 @@
                         <td> : {{$order->email}}</td>
                     </tr>
                     <tr>
-                        <td>Phone No.</td>
+                        <td>Nomor Handphone.</td>
                         <td> : {{$order->phone}}</td>
                     </tr>
                     <tr>
-                        <td>Address</td>
+                        <td>Alamat</td>
                         <td> : {{$order->address1}}, {{$order->address2}}</td>
                     </tr>
                     <tr>
-                        <td>Country</td>
+                        <td>Provinsi</td>
                         <td> : {{$order->country}}</td>
                     </tr>
                     <tr>
-                        <td>Post Code</td>
+                        <td>Kode Pos</td>
                         <td> : {{$order->post_code}}</td>
                     </tr>
               </table>

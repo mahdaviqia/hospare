@@ -30,8 +30,8 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<h3>Welcome To <span>Eshop</span></h3>
-							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
+							<h3>Selamat Datang di <span>Hospare</span></h3> 
+							<p>Hospare adalah perusahaan yang menjual SparePart mobil Honda, mulai dari ban, lampu, aki, dan sebagainya, kami dipercaya dengan barangnya yang original, konsumen menilai kami melalui barang yang memiliki kualitas tinggi dan daya tahan barang yang kuat.  </p>
 							<div class="button">
 								<a href="{{route('blog')}}" class="btn">Our Blog</a>
 								<a href="{{route('contact')}}" class="btn primary">Contact Us</a>
@@ -60,8 +60,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-rocket"></i>
-						<h4>Free shiping</h4>
-						<p>Orders over $100</p>
+						<h4>Pengiriman Cepat</h4>
+						<p>selalu tepat waktu dan kurir ramah</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -69,8 +69,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-reload"></i>
-						<h4>Free Return</h4>
-						<p>Within 30 days returns</p>
+						<h4>Barang Dapat Direturn jika rusak</h4>
+						<p>sebagai tanda barang berkualitas</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -78,8 +78,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-lock"></i>
-						<h4>Sucure Payment</h4>
-						<p>100% secure payment</p>
+						<h4>Pembayaran Aman</h4>
+						<p>100% Pembayaran aman dan amanah</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -87,8 +87,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-tag"></i>
-						<h4>Best Peice</h4>
-						<p>Guaranteed price</p>
+						<h4>Harga Terbaik</h4>
+						<p>Mendukung dikantong anda</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -97,5 +97,6 @@
 	</section>
 	<!-- End Shop Services Area -->
 
-	@include('frontend.layouts.newsletter')
+<br>
+<br>
 @endsection

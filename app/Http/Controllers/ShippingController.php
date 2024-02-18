@@ -46,10 +46,10 @@ class ShippingController extends Controller
         // return $data;
         $status=Shipping::create($data);
         if($status){
-            request()->session()->flash('success','Shipping successfully created');
+            request()->session()->flash('success','Barang Berhasil di Buat');
         }
         else{
-            request()->session()->flash('error','Error, Please try again');
+            request()->session()->flash('error','Error, Mohon Coba Lagi');
         }
         return redirect()->route('shipping.index');
     }
@@ -75,7 +75,7 @@ class ShippingController extends Controller
     {
         $shipping=Shipping::find($id);
         if(!$shipping){
-            request()->session()->flash('error','Shipping not found');
+            request()->session()->flash('error','Barang Tidak di Temukan');
         }
         return view('backend.shipping.edit')->with('shipping',$shipping);
     }
@@ -99,10 +99,10 @@ class ShippingController extends Controller
         // return $data;
         $status=$shipping->fill($data)->save();
         if($status){
-            request()->session()->flash('success','Shipping successfully updated');
+            request()->session()->flash('success','Barang Berhasil di Perbarui');
         }
         else{
-            request()->session()->flash('error','Error, Please try again');
+            request()->session()->flash('error','Error, Mohon Coba Lagi');
         }
         return redirect()->route('shipping.index');
     }
@@ -119,15 +119,15 @@ class ShippingController extends Controller
         if($shipping){
             $status=$shipping->delete();
             if($status){
-                request()->session()->flash('success','Shipping successfully deleted');
+                request()->session()->flash('success','Barang Berhasil di Hapus');
             }
             else{
-                request()->session()->flash('error','Error, Please try again');
+                request()->session()->flash('error','Error, Mohon Coba Lagi');
             }
             return redirect()->route('shipping.index');
         }
         else{
-            request()->session()->flash('error','Shipping not found');
+            request()->session()->flash('error','Barang Tidak Di Temukan');
             return redirect()->back();
         }
     }

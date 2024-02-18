@@ -11,8 +11,8 @@
                                 $settings=DB::table('settings')->get();
                                 
                             @endphp
-                            <li><i class="ti-headphone-alt"></i>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
-                            <li><i class="ti-email"></i> @foreach($settings as $data) {{$data->email}} @endforeach</li>
+                            <li><i class="ti-headphone-alt"></i>+62 001052434</li>
+                            <li><i class="ti-email"></i> Hospare@gmail.com</li>
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -20,7 +20,7 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <!-- Top Right -->
                     <div class="right-content">
-                        <ul class="list-main">
+                        <ul class="list-main"> 
                         <li><i class="ti-location-pin"></i> <a href="{{route('order.track')}}">Track Order</a></li>
                             {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li> --}}
                             @auth 
@@ -84,14 +84,14 @@
                     <div class="search-bar-top">
                         <div class="search-bar">
                             <select>
-                                <option >All Category</option>
+                                <option >Semua Kategori</option>
                                 @foreach(Helper::getAllCategory() as $cat)
                                     <option>{{$cat->title}}</option>
                                 @endforeach
                             </select>
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
-                                <input name="search" placeholder="Search Products Here....." type="search">
+                                <input name="search" placeholder="Cari Produk di Sini....." type="search">
                                 <button class="btnn" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
@@ -119,7 +119,7 @@
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
                                         <span>{{count(Helper::getAllProductFromWishlist())}} Items</span>
-                                        <a href="{{route('wishlist')}}">View Wishlist</a>
+                                        <a href="{{route('wishlist')}}">Lihat Keinginan</a>
                                     </div>
                                     <ul class="shopping-list">
                                         {{-- {{Helper::getAllProductFromCart()}} --}}
@@ -140,7 +140,7 @@
                                             <span>Total</span>
                                             <span class="total-amount">${{number_format(Helper::totalWishlistPrice(),2)}}</span>
                                         </div>
-                                        <a href="{{route('cart')}}" class="btn animate">Cart</a>
+                                        <a href="{{route('cart')}}" class="btn animate">Keranjang</a>
                                     </div>
                                 </div>
                             @endauth
@@ -156,7 +156,7 @@
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
                                         <span>{{count(Helper::getAllProductFromCart())}} Items</span>
-                                        <a href="{{route('cart')}}">View Cart</a>
+                                        <a href="{{route('cart')}}">Lihat Keranjang</a>
                                     </div>
                                     <ul class="shopping-list">
                                         {{-- {{Helper::getAllProductFromCart()}} --}}
@@ -200,13 +200,13 @@
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                                         <ul class="nav main-menu menu navbar-nav">
-                                            <li class="{{Request::path()=='home' ? 'active' : ''}}"><a href="{{route('home')}}">Home</a></li>
-                                            <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a href="{{route('about-us')}}">About Us</a></li>
-                                            <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Products</a><span class="new">New</span></li>												
-                                                {{Helper::getHeaderCategory()}}
+                                            <li class="{{Request::path()=='home' ? 'active' : ''}}"><a href="{{route('home')}}">Beranda</a></li>
+                                            <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a href="{{route('about-us')}}">Tentang Kami</a></li>
+                                            <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">Produk</a><span class="new">New</span></li>												
+                                                {{Helper::getHeaderCategory()}} 
                                             <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a></li>									
                                                
-                                            <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a href="{{route('contact')}}">Contact Us</a></li>
+                                            <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a href="{{route('contact')}}">Kontak Kami</a></li>
                                         </ul>
                                     </div>
                                 </div>
