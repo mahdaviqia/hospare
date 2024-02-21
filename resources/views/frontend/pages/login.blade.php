@@ -52,8 +52,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group login-btn">
-                                        <button class="btn" type="submit">Login</button>
-                                        <a href="{{route('register.form')}}" class="btn">Register</a>
+                                        <button class="btn" type="submit">Masuk</button>
+                                        <a href="{{route('register.form')}}" class="btn">Daftar</a>
                                     </div>
                                     <div class="checkbox">
                                         <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Ingat Aku</label>

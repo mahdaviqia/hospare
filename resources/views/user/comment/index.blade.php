@@ -18,23 +18,23 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Author</th>
-              <th>Post Title</th>
-              <th>Message</th>
-              <th>Date</th>
+              <th>Pembuat</th>
+              <th>Judul</th>
+              <th>Pesan</th>
+              <th>Tanggal</th>
               <th>Status</th>
-              <th>Action</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Author</th>
-              <th>Post Title</th>
-              <th>Message</th>
-              <th>Date</th>
+            <th>S.N.</th>
+              <th>Pembuat</th>
+              <th>Judul</th>
+              <th>Pesan</th>
+              <th>Tanggal</th>
               <th>Status</th>
-              <th>Action</th>
+              <th>Aksi</th>
             </tr>
           </tfoot>
           <tbody>
@@ -66,7 +66,7 @@
         </table>
         <span style="float:right">{{$comments->links()}}</span>
         @else
-          <h6 class="text-center">No post comments found!!!</h6>
+          <h6 class="text-center">Tidak ada komentar postingan!!!</h6>
         @endif
       </div>
     </div>

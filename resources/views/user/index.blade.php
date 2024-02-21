@@ -150,7 +150,7 @@
                 </tr>  
               @endforeach
               @else
-                <td colspan="8" class="text-center"><h4 class="my-4">You have no order yet!! Please order some products</h4></td>
+                <td colspan="8" class="text-center"><h4 class="my-4">Kamu tidak punya pesanan, mohon pesan terlebih dahulu!!!</h4></td>
               @endif
           </tbody>
         </table>

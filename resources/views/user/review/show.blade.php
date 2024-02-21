@@ -11,15 +11,15 @@
     <table class="table table-striped table-hover">
       <thead>
         <tr>
-            <th>S.N.</th>
-            <th>Order No.</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Quantity</th>
-            <th>Charge</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Action</th>
+             <th>S.N.</th>
+              <th>Nomor Order.</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Jumlah Barang</th>
+              <th>Kembalian</th>
+              <th>Total yang harus dibayar</th>
+              <th>Status</th>
+              <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -67,31 +67,31 @@
                         <td> : {{$order->cart_id}}</td>
                     </tr>
                     <tr>
-                        <td>Order Date</td>
+                        <td>Tanggal order</td>
                         <td> : {{$order->created_at->diffForHumans()}}</td>
                     </tr>
                     <tr>
-                        <td>Quantity</td>
+                        <td>Banyak Barang</td>
                         <td> : {{$order->quantity}}</td>
                     </tr>
                     <tr>
-                        <td>Order Status</td>
+                        <td>Status Order</td>
                         <td> : {{$order->status}}</td>
                     </tr>
                     <tr>
-                        <td>Shipping Charge</td>
+                        <td>Ongkos pengiriman</td>
                         <td> : $ {{number_format($order->delivery_charge,2)}}</td>
                     </tr>
                     <tr>
-                        <td>Total Amount</td>
+                        <td>Total yang harus dibayar</td>
                         <td> : $ {{number_format($order->total_amount,2)}}</td>
                     </tr>
                     <tr>
-                        <td>Payment Method</td>
+                        <td>Metode pembayaran</td>
                         <td> : </td>
                     </tr>
                     <tr>
-                        <td>Payment Status</td>
+                        <td>Status Pembayaran</td>
                         <td> : </td>
                     </tr>
               </table>
@@ -103,7 +103,7 @@
               <h4 class="text-center pb-4">SHIPPING INFORMATION</h4>
               <table class="table">
                     <tr class="">
-                        <td>Full Name</td>
+                        <td>Nama Lengkap</td>
                         <td> : {{$order->first_name}} {{$order->last_name}}</td>
                     </tr>
                     <tr>
@@ -115,15 +115,15 @@
                         <td> : {{$order->phone}}</td>
                     </tr>
                     <tr>
-                        <td>Address</td>
+                        <td>Alamat</td>
                         <td> : {{$order->address1}}, {{$order->address2}}</td>
                     </tr>
                     <tr>
-                        <td>Country</td>
+                        <td>Negara</td>
                         <td> : {{$order->country}}</td>
                     </tr>
                     <tr>
-                        <td>Post Code</td>
+                        <td>Kode Pos</td>
                         <td> : {{$order->post_code}}</td>
                     </tr>
               </table>

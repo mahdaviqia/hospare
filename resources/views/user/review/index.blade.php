@@ -20,8 +20,8 @@
               <th>S.N.</th>
               <th>Di review</th>
               <th>Nama Barang</th>
-              <th>Review</th>
-              <th>Rate</th>
+              <th>Ulasan</th>
+              <th>Penilaian</th>
               <th>Tanggal</th>
               <th>Status</th>
               <th>Action</th>
@@ -32,8 +32,8 @@
             <th>S.N.</th>
               <th>Di review</th>
               <th>Nama Barang</th>
-              <th>Review</th>
-              <th>Rate</th>
+              <th>Ulasan</th>
+              <th>Penilaian</th>
               <th>Tanggal</th>
               <th>Status</th>
               <th>Action</th>
@@ -79,7 +79,7 @@
         </table>
         <span style="float:right">{{$reviews->links()}}</span>
         @else
-          <h6 class="text-center">No reviews found!!!</h6>
+          <h6 class="text-center">Tidak ada Ulasan!!!</h6>
         @endif
       </div>
     </div>

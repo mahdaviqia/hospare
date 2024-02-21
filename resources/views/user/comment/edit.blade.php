@@ -4,17 +4,17 @@
 
 @section('main-content')
 <div class="card">
-  <h5 class="card-header">Comment Edit</h5>
+  <h5 class="card-header">Edit Komentar</h5>
   <div class="card-body">
     <form action="{{route('user.post-comment.update',$comment->id)}}" method="POST">
       @csrf
       @method('PATCH')
       <div class="form-group">
-        <label for="name">By:</label>
+        <label for="name">Oleh:</label>
         <input type="text" disabled class="form-control" value="{{$comment->user_info->name}}">
       </div>
       <div class="form-group">
-        <label for="comment">comment</label>
+        <label for="comment">Komen</label>
       <textarea name="comment" id="" cols="20" rows="10" class="form-control">{{$comment->comment}}</textarea>
       </div>
       <div class="form-group">
@@ -25,7 +25,7 @@
           <option value="inactive" {{(($comment->status=='inactive')? 'selected' : '')}}>Inactive</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="submit" class="btn btn-primary">Perbarui</button>
     </form>
   </div>
 </div>

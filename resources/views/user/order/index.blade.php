@@ -9,7 +9,7 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Order Lists</h6>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Daftar Pesanan</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -30,11 +30,11 @@
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+            <th>S.N.</th>
+              <th>Nomor Order.</th>
+              <th>Nama</th>
               <th>Email</th>
-              <th>Quantity</th>
+              <th>Jumlah Barang</th>
               <th>Charge</th>
               <th>Total Amount</th>
               <th>Status</th>
@@ -76,7 +76,7 @@
         </table>
         <span style="float:right">{{$orders->links()}}</span>
         @else
-          <h6 class="text-center">No orders found!!! Please order some products</h6>
+          <h6 class="text-center">Tidak ada barang, silahkan pesan terlebih dahulu</h6>
         @endif
       </div>
     </div>
